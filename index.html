@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>凡志</title>
+
+  <!-- Favicons -->
+  <link href="assets/images/favicon.png" rel="icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"> -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/stylesheets/styles.css" rel="stylesheet">
+
+
+</head>
+
+<style>
+  .gy-4 {
+    /* background-color: pink; */
+    display: flex;
+  }
+
+  .col-lg-4 {
+    flex: 1;
+    margin-left: 8%;
+  }
+
+  .col-lg-8 {
+    color: rgb(72, 72, 72);
+    flex: 2;
+    /* background-color: skyblue; */
+  }
+
+  .introduce {
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    position: relative;
+
+  }
+
+  .introduce img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .introduce .bgimg {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .introduce .item1 {
+    width: 35%;
+    height: 100vh;
+    background: rgba(73, 68, 68, 0.5);
+    left: 0px;
+    position: absolute;
+  }
+
+  .introduce .item2 {
+    width: 30%;
+    height: 100vh;
+    background: rgba(73, 68, 68, 0.5);
+    box-shadow: 1px 2px 5px white;
+    position: absolute;
+    /* left: 540px; */
+    left: 35%;
+  }
+
+  .introduce .item3 {
+    width: 35%;
+    height: 100vh;
+    background: rgba(73, 68, 68, 0.4);
+    left: 65%;
+    position: absolute;
+    /* top: 90px; */
+    /* background-color: pink; */
+  }
+
+  #idea>div {
+    transition: transform .2s;
+    /* 动画 */
+  }
+
+  #idea>div .zoom {
+    transition: transform .2s;
+    /* 动画 */
+  }
+
+  #idea>div:hover .zoom {
+    transform: scale(1.2);
+  }
+
+  #idea>div:hover {
+    /* transform: scale(1.5); */
+    background: rgba(73, 68, 68, 0.8);
+    box-shadow: 1px 2px 5px white;
+  }
+
+  .title1 {
+    color: white;
+    font-size: 20px;
+    margin: 60px auto 40px auto;
+    padding-left: auto;
+    /* background-color: pink; */
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .title2 {
+    color: white;
+    font-size: 20px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .title3 {
+    color: white;
+    font-size: 20px;
+    margin: 60px auto 40px auto;
+    padding-right: auto;
+    /* background-color: pink; */
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .myContent1 {
+    color: rgb(217, 197, 188);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto;
+    /* background-color: pink; */
+    text-align: center;
+    height: 200px;
+    width: 280px;
+    line-height: 40px;
+  }
+
+  .myContent2 {
+    color: rgb(217, 197, 188);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto;
+    /* padding-left: 80px; */
+    /* background-color: pink; */
+    text-align: center;
+    height: 200px;
+    width: 280px;
+    line-height: 40px;
+  }
+
+  .myContent3 {
+    color: rgb(217, 197, 188);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto;
+    /* background-color: pink; */
+    text-align: center;
+    height: 200px;
+    width: 280px;
+    line-height: 40px;
+  }
+
+  .schools img {
+    width: 300px;
+    padding: 30px;
+  }
+
+
+
+  @media screen and (max-width:768px) {
+    .pc {
+      display: none;
+    }
+
+    .pc_idea {
+      display: none;
+    }
+
+    .pc_map {
+      display: none;
+    }
+
+    .pc_partner {
+      display: none;
+    }
+
+    .pc_fzInfo {
+      display: none;
+    }
+
+    .pc_news {
+      display: none;
+    }
+
+    .pc_about {
+      display: none;
+    }
+
+    .swiper {
+      width: 100vw;
+      /* margin-top: -7%; */
+    }
+
+    .mobile_map {
+      position: relative;
+    }
+
+    .mobile_map img {
+      z-index: 1;
+      display: block;
+      width: 100vw;
+      margin: -10vh auto 0 auto;
+    }
+
+    .mobile_fzInfo {
+      margin: 0vh 0 0 10vw;
+    }
+
+    .mobile_fzInfo .logo {
+      width: 28vw;
+      height: 7vh;
+      margin-bottom: 2vh;
+    }
+
+    .mobile_idea {}
+  }
+
+  @media screen and (min-width:768px) {
+    .mobile {
+      display: none;
+    }
+
+    .mobile_map {
+      display: none;
+    }
+
+    .mobile_idea {
+      display: none;
+    }
+
+    .mobile_fzInfo {
+      display: none;
+    }
+
+    .mobile_partner {
+      display: none;
+    }
+
+    .mobile_news {
+      display: none;
+    }
+
+    .mobile_about {
+      display: none;
+    }
+
+    .swiper {
+      height: 100vh;
+      width: 100vw;
+      /* margin-top: -7%; */
+    }
+
+    .pc_map {
+      /* z-index: 99; */
+      position: relative;
+      height: 100vh;
+    }
+
+    .pc_map .content {
+      display: flex;
+      background-color: rgb(92, 208, 195);
+      /* margin: 200px 0px 0 320px; */
+      height: 70px;
+      width: 300px;
+      position: absolute;
+      margin: 160px 0 0 440px;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    .pc_map .content .font {
+      /* background-color: pink; */
+      margin: auto 0 auto 10px;
+
+    }
+
+    .pc_map .content .font .detail1 {
+      font-size: 14px;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .pc_map .content .font .detail2 {
+      font-size: 13px;
+      color: white;
+    }
+
+    .pc_map img {
+      z-index: 1;
+      display: block;
+      margin: -20px 0 0 130px;
+    }
+
+    .pc_fzInfo {
+      margin-top: 50px;
+      display: flex;
+    }
+
+    .pc_fzInfo .mylogo {
+      width: 200px;
+      height: 200px;
+      /* background-color: pink; */
+      margin: 0 200px 0 0;
+    }
+
+    .pc_fzInfo .container {
+      margin-left: 250px;
+    }
+
+    .pc_fzInfo .mylogo img {
+      margin: 35px 0 0 20px;
+      width: 50px;
+      height: 60px;
+    }
+  }
+
+
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .myTitle {
+    /* border-bottom: 1px solid white;  */
+    padding-bottom: 10px;
+    height: 140px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 839px;
+    /* margin: 0 auto 0 auto; */
+    position: absolute;
+    left: auto;
+    /* background-color: pink; */
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .myLine {
+    width: 539px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 13%, #FFFFFF 51%, rgba(255, 255, 255, 0.36) 87%, rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    /* margin-left: 250px; */
+    left: auto;
+    position: fixed;
+  }
+
+  .img-fluid {
+    width: 1000px;
+  }
+
+  .col-xl-4 .col-md-6 {
+    /* width: 80%; */
+    width: 400px;
+  }
+</style>
+
+<body>
+
+   <header id="header" class="header d-flex  align-items-center" style="background-color: rgba(73, 68, 68, 0.4); height: 68px;">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between" >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="myimg"><img src="./assets/images/logo/fzlogo.png" width="40" height="45" alt=""/></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul >
+            <li><a href="#introduce">凡志简介</a></li>
+            <li><a href="#about">关于凡志</a></li>
+            <li><a href="#idea" >凡志理念</a></li>
+            <li><a href="#recent-posts">新闻动态</a></li>
+            <li><a href="#partner">合作伙伴</a></li>
+            <li><a href="#contact-us">联系我们</a></li>
+            <li class="dropdown"><a href="javascript:void(0);"><span>产品信息</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li><a href="#">家长茶馆APP</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </nav>
+  
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+      
+    </div>
+
+  </header>
+  <!-- End Header -->
+
+  <!-- - - - - - - - -  Hero Section - - - - - - - -  -->
+  <!-- <section id="hero" class="hero"> -->
+  <!-- <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-12  order-lg-1 d-flex flex-column justify-content-center text-center caption">
+          <h2 class="myTitle">从凡至简，励志一生</h2>
+          <h2 class="myLine"></h2>
+        </div>
+      </div>
+    </div> -->
+  <section id="introduce">
+    <div class="pc">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/首屏banner背景图1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/首屏banner背景图2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/首屏banner背景图3.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination" style="margin-bottom: 1%;"></div>
+      </div>
+    </div>
+
+    <div class="mobile">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/banner1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/banner2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/banner3.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination" style="margin-bottom: 1%;"></div>
+      </div>
+    </div>
+  </section>
+  <!-- </section> -->
+  <!-- End Hero Section -->
+
+  <main id="main">
+    <!-- - - - - - - - -  About Us Section - - - - - - - -  -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="pc_about">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid #5CD0C2; padding-left: 5px; margin: 0px  auto 20px auto;">
+              关于凡志</h2>
+            <p>从凡至简，励志一生</p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <img src="assets/images/realAbout.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            </div>
+
+            <div class="col-lg-8">
+              <div class="content ps-0 ps-lg-5">
+                凡资源，拓展家长教育认知，赋能家庭教育，引家长科学构建家庭教育环境，激发孩子潜志聚焦家庭教育需求，汇聚优质家庭教育能，助力孩子道德修养、身心健康、劳动技能和学科素养全面发展。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile_about">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid #5CD0C2; padding-left: 5px; margin: -5vh  auto 20px auto;">
+              关于凡志</h2>
+            <p>从凡至简，励志一生</p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <img style="margin: 0 -4vw;" src="assets/images/realAbout.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            </div>
+
+            <div class="col-lg-8">
+              <div class="content ps-0 ps-lg-5" style="margin: -3vh 0; width: 100vw; padding: 1px 5vw 1px 1px;">
+                凡资源，拓展家长教育认知，赋能家庭教育，引家长科学构建家庭教育环境，激发孩子潜志聚焦家庭教育需求，汇聚优质家庭教育能，助力孩子道德修养、身心健康、劳动技能和学科素养全面发展。
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+    <section id="idea" class="introduce">
+
+      <div class="pc_idea">
+        <div class="item1">
+          <div class="zoom" style="margin: 58% auto 0 auto;">
+            <div style="width: 50px; height: 50px; margin: 0 auto;">
+              <img src="assets/images/logo/组 92.png" alt="">
+            </div>
+            <div class="title1">
+              公司愿景
+            </div>
+            <div class="myContent1">
+              家庭教育助力可信平台:与中国家庭一起成长,做有品质的家庭教育服务平台。
+            </div>
+          </div>
+        </div>
+
+        <div class="item2">
+          <div class="zoom" style="margin: 58% auto 0 auto;">
+            <div style="width: 50px; height: 50px; margin: 68% auto 0 auto;">
+              <img src="assets/images/logo/组 94.png" alt="">
+            </div>
+            <div class="title2">
+              公司理念
+            </div>
+            <div class="myContent2">
+              以仁爱之心，科研业之态，赋能家度教育。
+            </div>
+          </div>
+        </div>
+
+        <div class="item3">
+          <div class="zoom" style="margin: 58% auto 0 auto;">
+            <div style="width: 50px; height: 50px; margin: 58% auto 0 auto;">
+              <img src="assets/images/logo/组 93.png" alt="">
+            </div>
+            <div class="title3">
+              公司使命
+            </div>
+            <div class="myContent3">
+              让家庭教育更科学,让孩子成长更健康，让宁庭生活更幸福。
+            </div>
+          </div>
+        </div>
+
+        <img src="./assets/images/公司理念插图.jpg" alt="" class="bgimg">
+
+
+      </div>
+      <div class="mobile_idea">
+        <div>
+          <img src="./assets/images/公司愿景.png" alt="" style="width: 100vw;">
+          <img src="./assets/images/公司理念.png" alt="" style="width: 100vw;">
+          <img src="./assets/images/公司使命.png" alt="" style="width: 100vw;">
+        </div>
+      </div>
+    </section>
+
+    <!-- - - - - - - - -  Clients Section - - - - - - - -  --> <!-- End Clients Section -->
+
+    <!-- - - - - - - - -  Call To Action Section - - - - - - - -  -->
+
+    <!-- - - - - - - - -  Testimonials Section - - - - - - - -  --> <!-- End Testimonials Section -->
+
+    <!-- - - - - - - - -  Our Team Section - - - - - - - -  --> <!-- End Our Team Section -->
+
+
+    <!-- - - - - - - - -  Frequently Asked Questions Section - - - - - - - -  -->
+    <!-- End Frequently Asked Questions Section -->
+
+    <!-- - - - - - - - -  Recent Blog Posts Section - - - - - - - -  -->
+    <section id="recent-posts" class="recent-posts sections-bg" style="background-color: white;">
+      <div class="container" data-aos="fade-up">
+        <div class="pc_news">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid #5CD0C2;  margin: 0px  auto 20px auto;">新闻动态</h2>
+            <p>了解实时动态，更快掌握平台信息</p>
+          </div>
+
+          <div class="row gy-4">
+
+            <div class="col-xl-4 col-md-6">
+              <article>
+
+                <div class="post-img">
+                  <img src="assets/images/新闻动态插图1.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育平台&nbsp;</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">家长茶馆APP即将上线&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 50px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      我们的产品将于9月份上线，“让家庭教育更轻松，让孩子学习更有趣!”</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+            <div class="col-xl-4 col-md-6">
+              <article>
+
+                <div class="post-img">
+                  <img src="assets/images/新闻动态插图2.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育研讨会</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">第四届家庭教育研讨会&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 50px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      本届研讨会聚焦“传家风、新融合、育新人——助力孩子健康快乐成长”主题进行交流研讨。</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+            <div class="col-xl-4 col-md-6">
+              <article>
+
+                <div class="post-img">
+                  <img src="assets/images/新闻动态插图3.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育讲坛</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">家庭教育讲坛圆满举办&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 32px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      国内著名教育专家学者、一线教育工作者、家长代表围绕“协同共育赋能未来”主题,共同探讨家校社协同育人途径。</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+          </div>
+        </div>
+        <!-- End recent posts list -->
+        <div class="mobile_news">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid #5CD0C2;  margin: -5vh  auto 20px auto;">新闻动态</h2>
+            <p>了解实时动态，更快掌握平台信息</p>
+          </div>
+
+          <div class="row gy-4">
+
+            <div class="col-xl-4 col-md-6">
+              <article style="width: 100vw; margin: 0 0 0 -3.2vw;">
+
+                <div class="post-img" style="width: 100vw;">
+                  <img src="assets/images/新闻动态插图1.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育平台&nbsp;</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">家长茶馆APP即将上线&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 50px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      我们的产品将于9月份上线，“让家庭教育更轻松，让孩子学习更有趣!”</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+            <div class="col-xl-4 col-md-6">
+              <article style="width: 100vw; margin: 0 0 0 -3.2vw;">
+
+                <div class="post-img" style="width: 100vw;">
+                  <img src="assets/images/新闻动态插图2.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育研讨会</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">第四届家庭教育研讨会&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 50px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      本届研讨会聚焦“传家风、新融合、育新人——助力孩子健康快乐成长”主题进行交流研讨。</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+            <div class="col-xl-4 col-md-6">
+              <article style="width: 100vw; margin: 0 0 0 -3.2vw;">
+
+                <div class="post-img" style="width: 100vw;">
+                  <img src="assets/images/新闻动态插图3.jpg" alt="" class="img-fluid">
+                </div>
+
+                <p class="post-category">家庭教育讲坛</p>
+
+                <h2 class="title" style=" margin-left: -3px;"> <a href="blog-details.html">家庭教育讲坛圆满举办&nbsp;</a> </h2>
+                <p>&nbsp;</p>
+                <div class="d-flex align-items-center">
+                  <div class="post-meta">
+                    <p class="post-author" style="margin: -50px 0 32px -3px; font-size: 14px; color: rgb(112,112,112);">
+                      国内著名教育专家学者、一线教育工作者、家长代表围绕“协同共育赋能未来”主题,共同探讨家校社协同育人途径。</p>
+                    <p class="post-date">
+                      <time datetime="2022-01-01">2023-08-28&nbsp;</time>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Recent Blog Posts Section -->
+
+    <section id='partner' class="recent-posts sections-bg" style="background-color: white;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="pc_partner">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid rgb(131,191,183);  margin: 0px  auto 20px auto;">合作伙伴</h2>
+            <p>家庭教育,从点滴做起</p>
+          </div>
+
+          <div class="schools">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+            <img src="assets/images/clients/client-1.png" alt="">
+          </div>
+        </div>
+
+
+        <div class="mobile_partner">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid rgb(131,191,183);  margin: -5vh  auto 20px auto;">合作伙伴</h2>
+            <p>家庭教育,从点滴做起</p>
+          </div>
+
+          <div class="schools" style="width: 100vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+            <img src="assets/images/clients/client-1.png" alt="" style="margin: 0 0 0 9vw;">
+          </div>
+        </div>
+
+      </div><!-- End recent posts list -->
+
+      </div>
+    </section>
+
+    <section id="contact-us" class="recent-posts sections-bg" style="background-color: rgb(243,248,251);">
+      <div class="container" data-aos="fade-up">
+
+
+
+        <div class="pc_map">
+          <div class="section-header">
+            <h2 style="width: 143px;border-bottom: 2px solid rgb(131,191,183);  margin: 0px  auto 20px auto;">联系我们</h2>
+            <p>家庭教育,从点滴做起</p>
+          </div>
+          <div class="content">
+            <div style="width: 80px; height: 60px; background-color: white; margin: 0 auto ; padding: 10px;">
+              <img style="width: 60px; height: 35px; background-color: white; margin: 0 auto ;"
+                src="./assets/images/联系我们logo.png" alt="">
+            </div>
+            <div class="font">
+              <div class="detail1">
+                四川凡志信息技术有限公司
+              </div>
+              <div class="detail2">
+                成都市吉羊区草堂蓝润摩里中心
+              </div>
+              <div style="width: 0;
+              height: 0;
+              border-top: 10px solid rgb(92,208,195);
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              margin: 19px 0 0 30px ;">
+              </div>
+            </div>
+          </div>
+          <img src="./assets/images/联系我们地图.jpg" alt="">
+        </div>
+
+        <div class="mobile_map">
+          <div class="section-header" style="margin-bottom: 10vh;">
+            <h2 style="width: 143px;border-bottom: 2px solid rgb(131,191,183);  margin : -5vh  auto 0vh auto;">联系我们
+            </h2>
+            <p>家庭教育,从点滴做起</p>
+          </div>
+          <img src="./assets/images/联系我们.jpg" alt="" style="margin: 0  0  0  -3vw;">
+        </div>
+
+      </div><!-- End recent posts list -->
+
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- - - - - - - - -  Footer - - - - - - - -  -->
+  <footer id="footer" class="footer">
+
+    <div class="pc_fzInfo">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-12 col-md-12 footer-info text-right">
+            <div>
+              <img src="assets/images/icons/phone.png" width="16" height="16" alt="" />
+              <span>固定电话：（待公布）</span>
+            </div>
+            <div style="margin: 20px 0;">
+              <img src="assets/images/icons/email.png" width="16" height="16" alt="" />
+              <span>邮箱：fanzhiinfo@163.com&nbsp;</span>
+            </div>
+            <div>
+              <img src="assets/images/icons/address.png" width="16" height="16" alt="" />
+              <span>公司地址：四川省成都市青羊区草堂蓝润摩里中心
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mylogo">
+        <img src="./assets/images/logo/fzlogo.png" alt="">
+      </div>
+    </div>
+
+    <div class="mobile_fzInfo">
+      <div>
+        <img class="logo" src="./assets/images/Logo.png" alt="">
+      </div>
+      <div>
+        <img src="assets/images/icons/phone.png" width="16" height="16" alt="" />
+        <span>固定电话：（待公布）</span>
+      </div>
+      <div>
+        <img src="assets/images/icons/email.png" width="16" height="16" alt="" />
+        <span>邮箱：fanzhiinfo@163.com&nbsp;</span>
+      </div>
+      <div>
+        <img src="assets/images/icons/address.png" width="16" height="16" alt="" />
+        <span>公司地址：四川省成都市青羊区草堂蓝润摩里中心
+        </span>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy;四川凡志信息技术有限公司版权所有 </div>
+      <div class="credits">
+        <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2023019975号-1</a>
+        <div style="width:300px;margin:0 auto;">
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010502011806"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="./assets/images/icons/gongan.png" style="float:left;" />
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">川公网安备 51010502011806号</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/javascripts/main.js"></script>
+
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+
+  </script>
+</body>
+
+
+
+</html>
